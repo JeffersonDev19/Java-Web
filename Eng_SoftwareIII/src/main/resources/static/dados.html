@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>FaapAcontece</title>
+	
+    
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	
+
+	<link href="css/bootstrap.min.css" rel=stylesheet>
+	<link href="css/styles.css" rel=stylesheet>
+	
+	
+	<script>
+		$(document).ready(function(){  
+				$.getJSON("/dados?format=json&jsoncallback=",function(data) {
+						$("#status").html(data[0].Dados);				
+				});
+		});
+	</script>
+
+  </head>
+  <body>
+     <div id="status" class="col-md-offset-4 col-md-4"></div>
+
+  </body>
+</html>
